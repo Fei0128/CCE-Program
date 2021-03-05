@@ -106,6 +106,7 @@ int main()
 數字範圍：整數 1 – 9。
 程式限制：不得使用power()函數。不得變更已給定的主程式。
 主程式：
+```C
 int main(void)
 {
 	int a,b;
@@ -113,6 +114,7 @@ int main(void)
 	printf("[%d]",MYPOWER(a,b));
 	return 0;
 }
+```
 -------------------------------------------
 ```C
 #include<stdio.h>
