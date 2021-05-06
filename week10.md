@@ -15,29 +15,29 @@ int main()
 	int T;
 	scanf("%d\n\n",&T);
 	
-	for(int t=0; t<T ;t++)
+	for(int t=0; t<T ;t++)  //讀資料
 	{
 		int N=0;
-		while( gets(line)!=NULL )
+		while( gets(line)!=NULL ) //gets() 讀一整行
 		{
-			if( strcmp(line,"")==0) break;
+			if( strcmp(line,"")==0) break; //break空行離開
 			
 			strcpy(tree[N],line);
-			N++;
+			N++;  //  數出正確的樹數目
 			
 		}
 		if(t>0) printf("\n");
-		int ans=1;
+		int ans=1; //名字不同時，換下一個名字計算
 	
 		qsort( tree , N ,32 ,compare);
 		printf("%s ",tree[0]);
 		for(int i=0;i<N-1;i++)
 		{
-			if( strcmp(tree[i],tree[i+1])==0)
+			if( strcmp(tree[i],tree[i+1])==0) //相同時，累計
 			{
 				ans++;
 			}
-			else
+			else //不相同時，換下一個名字，新的開始
 			{
 				printf("%.4f\n",100*ans/(float)N);
 				ans=1;
